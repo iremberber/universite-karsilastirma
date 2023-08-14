@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="unikarsilastirma.css">
+</head>
+<body>
+
+    <h1 id="anabaslik">Senin İçin Hangi Üniversite Daha İyi?</h1>
+
+    <h3 id="altbaslik">Büyük bir sınavdan çıktın fakat unutma ki asıl sınavın şimdi başlıyor: Tercihler. <br> 
+        Tercih dönemi oldukça zordur. <br>
+        Çevrenden binlerce farklı öneri duyacaksın.<br>
+        Herkesin önceliği farklıdır. Bir başkası için önemli olan senin için önemli olmayabilir.<br>
+        İşte bu yüzden bu site var.<br>
+        Her başlığa, kendi düşüncen doğrultusunda değer vermelisin.<br>
+        Eğer senin için önemsiz soru varsa boş bırakabilirsin.<br>
+        Sonuçları hesapladığında, hangi üniversitenin senin için daha iyi olduğunu öğrenmiş olacaksın!</h3>
+
+ 
+        
+   
+        <button type="button" id="select-titles-button">Karşılaştırmaya Hazırsan <br>Tıkla!</button>
+    </form>
+    
+    <table id="result-table" style="display: none;">
+        <tr>
+            <th>
+                Sorular
+            </th>
+            <th id="title1-header">
+                Üniversite 1
+            </th>
+            <th id="title2-header"> Üniversite 2
+            </th>
+            
+        </tr>
+        <tr>
+            <td>Şehrin evine uzaklığı</td>
+            <td><input type="number" class="value-input custom-input" data-title="title1"></td>
+            <td><input type="number" class="value-input custom-input" data-title="title2"></td>
+            <td class="decision-cell"></td>
+        </tr>
+        <tr>
+            <td>Akademik kadroda bulunan profesör sayısı</td>
+            <td><input type="number" class="value-input custom-input" data-title="title1"></td>
+            <td><input type="number" class="value-input custom-input" data-title="title2"></td>
+            <td class="decision-cell"></td>
+        </tr>
+        <tr>
+            <td>Bulunduğu şehrin pahalılığı</td>
+            <td><input type="number" class="value-input custom-input" data-title="title1"></td>
+            <td><input type="number" class="value-input custom-input" data-title="title2"></td>
+            <td class="decision-cell"></td>
+        </tr>
+        <tr>
+            <td>Kampüs puanlaması</td>
+            <td><input type="number" class="value-input custom-input" data-title="title1"></td>
+            <td><input type="number" class="value-input custom-input" data-title="title2"></td>
+            <td class="decision-cell"></td>
+        </tr>
+        
+    </table>
+
+<button type="button" id="sonuc-button">Sonuçları Hesapla</button>
+
+
+    <p id="total-result" style="display: none;"></p>
+
+
+</body>
+<script src="unikarsilastirma.js"></script>
+</html>
