@@ -9,30 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         resultTable.style.display = "table";
     });
 
-    valueInputs.forEach(function (input) {
-        input.addEventListener("input", function () {
-            const title = input.getAttribute("data-title");
-            const otherTitle = title === "title1" ? "title2" : "title1";
-            const otherInput = document.querySelector(`.value-input[data-title="${otherTitle}"]`);
-            const decisionCell = input.closest("tr").querySelector(".decision-cell");
-
-            if (input.value === "" || otherInput.value === "") {
-                decisionCell.textContent = "";
-                return;
-            }
-
-            const value1 = parseFloat(input.value);
-            const value2 = parseFloat(otherInput.value);
-
-            if (value1 > value2) {
-                decisionCell.textContent = `${title} daha yüksek bir değere sahip.`;
-            } else if (value2 > value1) {
-                decisionCell.textContent = `${otherTitle} daha yüksek bir değere sahip.`;
-            } else {
-                decisionCell.textContent = "Değerler eşit.";
-            }
-        });
-    });
 
     // Sonuçları hesapla ve göster
     const calculateButton = document.getElementById("sonuc-button");
